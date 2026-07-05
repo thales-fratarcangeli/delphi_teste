@@ -1,0 +1,25 @@
+# ===========================================================================
+# pubspec.yaml - o "arquivo de projeto" do Flutter (equivale ao .dproj do Delphi).
+# Aqui declaramos o nome do app, a versão do Dart/Flutter e as DEPENDÊNCIAS
+# (bibliotecas de terceiros). O comando "flutter pub get" baixa tudo.
+# ===========================================================================
+name: erp_mobile
+description: Aplicativo mobile do ERP (estudo) - consome a API REST do sistema.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # http: biblioteca para fazer chamadas HTTP (GET/POST) na API REST do ERP.
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,51 @@
+# ─── Delphi ───
+# Compiled units / binaries
+*.dcu
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.o
+*.obj
+*.a
+
+# Local/user-specific project files
+*.local
+*.identcache
+*.dsk
+*.tvsconfig
+*.stat
+
+# Build output dirs
+__history/
+__recovery/
+Win32/
+Win64/
+Android/
+Android64/
+iOSDevice32/
+iOSDevice64/
+iOSSimulator/
+OSX32/
+OSX64/
+Debug/
+Release/
+
+# ─── Flutter / Dart ───
+MobileFlutter/.dart_tool/
+MobileFlutter/.flutter-plugins
+MobileFlutter/.flutter-plugins-dependencies
+MobileFlutter/.packages
+MobileFlutter/build/
+MobileFlutter/.pub-cache/
+MobileFlutter/.pub/
+**/*.g.dart
+**/*.freezed.dart
+
+# ─── Geral ───
+*.log
+*.tmp
+*.bak
+*.~*
+Thumbs.db
+.DS_Store

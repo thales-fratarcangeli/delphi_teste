@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =========================================================================
+     GRUPO DE PROJETOS do ERP.
+     Um "Project Group" (.groupproj) junta vários projetos Delphi para você
+     abrir e compilar todos de uma vez (Project > Build All Projects).
+
+     São 3 EXECUTÁVEIS independentes:
+       - Launcher\Launcher.dproj            -> o launcher (login + módulos)
+       - Faturamento\Faturamento.dproj      -> o módulo MDI de faturamento
+       - Telemetria\TelemetriaService.dproj -> o serviço de telemetria
+
+     IMPORTANTE: os arquivos .dproj são gerados pelo Delphi quando você abre
+     cada .dpr pela primeira vez. Se ao abrir este grupo algum projeto aparecer
+     faltando, abra o .dpr correspondente uma vez (File > Open) e salve.
+     ========================================================================= -->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1B2C3D4-0000-0000-0000-000000000001}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Launcher\Launcher.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Faturamento\Faturamento.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Telemetria\TelemetriaService.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Launcher">
+        <MSBuild Projects="Launcher\Launcher.dproj"/>
+    </Target>
+    <Target Name="Faturamento">
+        <MSBuild Projects="Faturamento\Faturamento.dproj"/>
+    </Target>
+    <Target Name="TelemetriaService">
+        <MSBuild Projects="Telemetria\TelemetriaService.dproj"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Launcher;Faturamento;TelemetriaService"/>
+    </Target>
+</Project>
